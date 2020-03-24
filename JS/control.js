@@ -1,24 +1,24 @@
-'use strict'
+'use strict';
 
-// function announcementHandler(event) {
-//     event.preventDefault();
-//     // console.log("test")
-//     //    stringify the text to our local storage
-//     //    update announcement div with the annoucement 
-//     //    save the annoucement in the text area
-//     localStorage.setItem('announcement', JSON.stringify(document.getElementById('announcement').value));
-//     console.log(localStorage.announcement);
-//   }
-  
-  document.getElementById('announcementBannerForm').addEventListener('submit', Banner.announcementHandler);
+// *** This page is where functions specific to the control page are colled *** //
 
-//   function saveAnnouncement() {
-//     var bannerEl = document.getElementById('announcementBar');
-//     var textDefault = document.getElementById('announcement');
-//     var displayAnnouncement = JSON.parse(localStorage.getItem('announcement'));
-//     console.log(displayAnnouncement);
-//     textDefault.value = displayAnnouncement;
-//   }
-    Banner.saveAnnouncement();
+var banner;
 
-//   saveAnnouncement();
+function loadBanner() {
+  var bannerText = JSON.parse(localStorage.getItem("announcement"));
+  banner = new Banner(bannerText);
+}
+loadBanner();
+banner.textDefault();
+
+function announcementHandler(event) {
+  event.preventDefault();
+  // console.log("test")
+  //    stringify the text to our local storage
+  //    update announcement div with the annoucement 
+  //    save the annoucement in the text area
+  localStorage.setItem('announcement', JSON.stringify(document.getElementById('announcement').value));
+  console.log(localStorage.announcement);
+}
+
+document.getElementById('announcementBannerForm').addEventListener('submit', announcementHandler);
