@@ -14,49 +14,67 @@
     <img id="logo" src="assets/BeerLogo-01.png" alt="logo">
   </header>
 
-  <main id="siteContent">
-    <form id="beerInventoryForm">
-      <label>Beer Name</label>
-      <input id="beerName" type="text"><br>
+  <main>
 
-      <label>Beer Type</label>
-      <select id="beerTypeInput" name="beerTypeInput">
-        <option value="IPA">IPA</option>
-        <option value="Pale Ale">Pale Ale</option>
-        <option value="Porter">Porter</option>
-        <option value="Stout">Stout</option>
-        <option value="Hefeweizen">Hefeweizen</option>
-        <option value="Domestic">Domestic</option>
-      </select><br>
+    <div id="inventoryFormsContainer">
 
-      <label>ABV</label>
-      <input id="abv" type="number" step=".01"><br>
+      <form id="beerInventoryForm">
 
-      <label>Hop Type</label>
-      <input id="hopType" type="text"><br>
+        <div id="one">
+          <label>Beer Name</label>
+          <input id="beerName" type="text"><br>
+        </div>
 
-      <label>Short Description</label>
-      <input id="shortDesc" type="text"><br>
+          <div id="two">
+          <label>Beer Type</label>
+          <select id="beerTypeInput" name="beerTypeInput">
+            <option value="IPA">IPA</option>
+            <option value="Pale Ale">Pale Ale</option>
+            <option value="Porter">Porter</option>
+            <option value="Stout">Stout</option>
+            <option value="Hefeweizen">Hefeweizen</option>
+            <option value="Domestic">Domestic</option>
+          </select><br>
+        </div>
 
-      <label>Long Description</label>
-      <textarea id="longDesc" name="message" rows="10" cols="41">
-      </textarea><br>
+        <div id="three">
+          <label>ABV</label>
+          <input id="abv" type="number" step=".01"><br>
+        </div>
 
-      <button type="button">Add to Inventory</button>
-    </form>
+        <div id="four">
+          <label>Hop Type</label>
+          <input id="hopType" type="text"><br>
+        </div>
+      
+        <div id="five">
+          <label>Short Description</label>
+          <input id="shortDesc" type="text"><br>
+        </div>
 
-    <div id="inventoryTable">
-      <table id="inventory">
+        <div id="six">
+          <label>Long Description</label>
+          <textarea id="longDesc" name="message" rows="10" cols="41">
+          </textarea><br>
+        </div>
+          
+        <button type="button">Add to Inventory</button>
 
-        <thead>
-          <td>Name</td>
-          <td>Sale</td>
-          <td>Hide</td>
-          <td>Remove</td>
-        </thead>
-        <!-- Where beer list inventory items will append to -->
+      </form>
 
-      </table>
+      <div id="inventoryTable">
+        <table id="inventory">
+
+          <thead>
+            <td>Name</td>
+            <td>Sale</td>
+            <td>Hide</td>
+            <td>Remove</td>
+          </thead>
+          <!-- Where beer list inventory items will append to -->
+
+        </table>
+      </div>
     </div>
 
     <form id="announcementBannerForm">

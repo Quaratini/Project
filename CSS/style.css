@@ -130,16 +130,11 @@ footer p {
 form {
   border: solid #82204A 3px;
   border-radius: 15px;
-}
-
-#beerInventoryForm {
-  display: inline-block;
-  width: 270px;
   padding: 25px;
-  line-height: 1.5;
 }
 
 button {
+  display: block;
   padding: 15px;
   margin: 10px;
   border: none;
@@ -150,22 +145,40 @@ button {
   font-size: 14px;
 }
 
-#beerInventoryForm label {
-  padding-bottom: 0px;
+
+
+#inventoryFormsContainer {
+  display: flex;
 }
 
-#beerInventoryForm input, select, textarea {
-float: right;
+#beerInventoryForm {
+  display: inline-block;
+  width: 33.33%;
+  line-height: 1.5;
 }
 
-/* #beerInventoryForm textarea:last-child {
-  float: left;
-} */
+#beerInventoryForm input, select {
+  float: right;
+}
+
+#beerInventoryForm textarea {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#beerInventoryForm button {
+  margin: 0 auto;
+}
+
+#one input {
+}
+
+
 
 #inventoryTable {
   display: inline-block;
-  width: 600px;
-  margin: 10px;
+  width: 66.66%;
   border: solid #82204A 3px;
   border-radius: 15px;
 }
@@ -177,8 +190,6 @@ float: right;
 #announcementBannerForm {
   display: inline-block;
   width: 45%;
-  padding: 10px;
-  margin: 10px;
 }
 
 #announcement {
@@ -188,6 +199,4 @@ float: right;
 
 #passwordResetForm {
   display: inline-block;
-  padding: 10px;
-  margin: 10px;
 }
