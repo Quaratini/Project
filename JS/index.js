@@ -2,14 +2,7 @@
 
 // *** This page is where functions specific to the home page are colled *** //
 
-
-var banner;
-
-function loadBanner() {
-  var bannerText = JSON.parse(localStorage.getItem("announcement"));
-  banner = new Banner(bannerText);
-}
-loadBanner();
+var banner = new Banner;
 
 function postBanner() {
   // grab the annoucement text from local storage and add it to the dom

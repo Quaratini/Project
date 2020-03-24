@@ -2,11 +2,13 @@
 
 // *** This page is where global objects and their prototypes are defined *** //
 
-var Banner = function(bannerText) {
-  // this.bannerEl = document.getElementById('announcementBar');
-  // this.textDefault = document.getElementById('announcement');
-  // this.displayAnnouncement = JSON.parse(localStorage.getItem('announcement'));
-  this.bannerText = bannerText;
+var Banner = function() {
+  this.bannerText;
+  this.loadBanner();
+};
+
+Banner.prototype.loadBanner = function() {
+  this.bannerText = JSON.parse(localStorage.getItem('announcement'));
 };
 
 Banner.prototype.announcementHandler = function(event) {
@@ -16,13 +18,6 @@ Banner.prototype.announcementHandler = function(event) {
   event.preventDefault();
   localStorage.setItem('announcement', JSON.stringify(document.getElementById('announcement').value));
   console.log(localStorage.announcement);
-};
-
-Banner.prototype.saveAnnouncement = function() {
-  // var textDefault = document.getElementById('announcement');
-  // var displayAnnouncement = JSON.parse(localStorage.getItem('announcement'));
-  // console.log(displayAnnouncement);
-  this.textDefault.value = this.displayAnnouncement;
 };
 
 Banner.prototype.textDefault = function() {
