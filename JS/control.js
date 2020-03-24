@@ -2,18 +2,14 @@
 
 // *** This page is where functions specific to the control page are colled *** //
 
-var banner;
+var banner = new Banner();
 
-function loadBanner() {
-  var bannerText = JSON.parse(localStorage.getItem("announcement"));
-  banner = new Banner(bannerText);
-}
-loadBanner();
 banner.textDefault();
 
+
+// Discretely Defined Event Handler - *** had issues using event handlers in conjunction with the Banner object protoype ***
 function announcementHandler(event) {
   event.preventDefault();
-  // console.log("test")
   //    stringify the text to our local storage
   //    update announcement div with the annoucement 
   //    save the annoucement in the text area
