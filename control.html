@@ -12,6 +12,7 @@
 
   <header>
     <img id="logo" src="assets/BeerLogo-01.png" alt="logo">
+    <h1>Admin Page</h1>
   </header>
 
   <main>
@@ -19,6 +20,8 @@
     <div id="inventoryFormsContainer">
 
       <form id="beerInventoryForm">
+
+        <h1>Add Beer to Inventory</h1>
 
         <div id="one">
           <label>Beer Name</label>
@@ -63,8 +66,8 @@
       </form>
 
       <div id="inventoryTable">
-        <table id="inventory">
-
+        <h1>Current Inventory</h1>
+        <table>
           <thead>
             <td>Name</td>
             <td>Sale</td>
@@ -72,18 +75,19 @@
             <td>Remove</td>
           </thead>
           <!-- Where beer list inventory items will append to -->
-
         </table>
       </div>
     </div>
 
     <form id="announcementBannerForm">
+      <h1>Announcement Banner</h1>
       <textarea name="announcement" id="announcement" cols="50" rows="3"></textarea>
       <button type="button">Update</button>
     </form>
 
     <form id="passwordResetForm">
-      <input type="password">
+      <h1>Admin Password</h1>
+      <input id="password" type="password">
       <button type="button">Change</button>
     </form>
 
