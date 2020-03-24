@@ -20,6 +20,8 @@ Dark Highlight - #F95738 - Bright Orange
 Alt Color - #82204A - Red/Pink
 */
 
+/* Global */
+
 body {
   width: 960px;
   margin: 0 auto;
@@ -27,27 +29,38 @@ body {
   background-color: #FAF0CA;
 }
 
-header {
-  width: 100%;
-  height: 175px;
-  background-color: gray;
+a {
+  text-decoration: none;
+  color: #F95738;
 }
 
-header img {
-  float: left;
-  /* display: inline-block; */
-  max-width: 20%;
-  margin: 10px auto;
+a:hover {
+  color: #EE964B;
+}
+
+/* Header */
+header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#logo {
+  display: inline-block;
+  width: 15%;
+  margin-left: 42.5%;
 }
 
 #social {
-  display: inline-block;
-  margin-left: 70%;
+  float: right;
 }
 
 #social li {
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
 }
 
 #nav {
@@ -59,8 +72,122 @@ header img {
   width: 25%;
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
+  padding: 10px 0;
+  color: #0D3B66;
 }
 
-#nav li {
-  padding: 5px 0;
+#nav li:hover {
+  color: #077187;
+  cursor: pointer;
+}
+
+
+
+/* Main */
+
+main h1 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main p, li {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#smallLogo {
+  width: 25%;
+  opacity: 0.5;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li{
+  display: inline-block;
+  width: 33.333%;
+  text-align: center;
+  margin-top: 45px;
+}
+
+#smallLogoContainer {
+  margin-top: 0;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Admin Page */
+
+form {
+  border: solid #82204A 3px;
+  border-radius: 15px;
+}
+
+#beerInventoryForm {
+  display: inline-block;
+  width: 270px;
+  padding: 25px;
+  line-height: 1.5;
+}
+
+button {
+  padding: 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #CCFBFE;
+  color: #231123;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+}
+
+#beerInventoryForm label {
+  padding-bottom: 0px;
+}
+
+#beerInventoryForm input, select, textarea {
+float: right;
+}
+
+/* #beerInventoryForm textarea:last-child {
+  float: left;
+} */
+
+#inventoryTable {
+  display: inline-block;
+  width: 600px;
+  margin: 10px;
+  border: solid #82204A 3px;
+  border-radius: 15px;
+}
+
+#inventory td {
+  padding: 10px;
+}
+
+#announcementBannerForm {
+  display: inline-block;
+  width: 45%;
+  padding: 10px;
+  margin: 10px;
+}
+
+#announcement {
+  padding: 15px;
+  margin: 10px;
+}
+
+#passwordResetForm {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
 }
