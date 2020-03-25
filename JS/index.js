@@ -17,3 +17,25 @@ function postBanner() {
 }
 
 postBanner();
+
+// Password material
+var password = new Password(); 
+
+
+function passwordPrompt() {
+var response = prompt('Please enter password');
+if (response !== password.password) {
+alert('Try Again')
+
+} else {
+  window.location.href = 'control.html'
+};
+
+}
+
+
+document.getElementById('link').addEventListener('click', passwordPrompt);
+
+
+
+
