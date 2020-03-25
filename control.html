@@ -61,7 +61,7 @@
           </textarea><br>
         </div>
           
-        <button type="button">Add to Inventory</button>
+        <button type="submit">Add to Inventory</button>
 
       </form>
 
@@ -69,11 +69,16 @@
         <h1>Current Inventory</h1>
         <table>
           <thead>
-            <td>Name</td>
-            <td>Sale</td>
-            <td>Hide</td>
-            <td>Remove</td>
+            <tr>
+              <th>Name</th>
+              <th>Sale</th>
+              <th>Hide</th>
+              <th>Remove</th>
+            </tr>
           </thead>
+          <tbody id='body'>
+
+          </tbody>
           <!-- Where beer list inventory items will append to -->
         </table>
       </div>

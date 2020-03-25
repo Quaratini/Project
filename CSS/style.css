@@ -201,12 +201,13 @@ table {
   text-align: center;
 }
 
-table:nth-child(even) {
+table tr:nth-child(odd) {
   background-color: #D6CDAD;
 }
 
-table td {
+table th {
   padding: 10px;
+  background-color: #82204A;
 }
 
 #announcementBannerForm {

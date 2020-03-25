@@ -4,6 +4,8 @@
 
 var banner = new Banner;
 
+var currentInventory = new Inventory();
+
 function postBanner() {
   // grab the annoucement text from local storage and add it to the dom
   var bannerEl = document.getElementById('announcementBar');
@@ -19,17 +21,17 @@ function postBanner() {
 postBanner();
 
 // Password material
-var password = new Password(); 
+var password = new Password();
 
 
 function passwordPrompt() {
-var response = prompt('Please enter password');
-if (response !== password.password) {
-alert('Try Again')
+  var response = prompt('Please enter password');
+  if (response !== password.password) {
+    alert('Try Again');
 
-} else {
-  window.location.href = 'control.html'
-};
+  } else {
+    window.location.href = 'control.html';
+  }
 
 }
 
