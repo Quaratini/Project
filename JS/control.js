@@ -18,3 +18,14 @@ function announcementHandler(event) {
 }
 
 document.getElementById('announcementBannerForm').addEventListener('submit', announcementHandler);
+
+function passwordHandler(event) {
+  event.preventDefault();
+  //    stringify the text to our local storage
+  //    update password div with the password 
+  //    save the password in the text area
+  localStorage.setItem('password', JSON.stringify(document.getElementById('password').value));
+  console.log(localStorage.password);
+}
+
+document.getElementById('passwordResetForm').addEventListener('submit', passwordHandler);

@@ -24,3 +24,25 @@ Banner.prototype.textDefault = function() {
   document.getElementById('announcement').value = this.bannerText;
 };
 
+
+
+// pasword material 
+
+var Password = function() {
+this.password
+this.getPassword()
+}
+
+Password.prototype.getPassword = function() {
+  // var temp = JSON.parse(localStorage.getItem('password'));
+
+  if (!localStorage.password) {
+    this.password = 'reset'
+    localStorage.setItem('password', JSON.stringify(this.password));
+  } else {
+    this.password = JSON.parse(localStorage.getItem('password'));
+  }  
+
+}
+
+
