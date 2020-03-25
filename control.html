@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarantini</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <header>
+    <img id="logo" src="assets/BeerLogo-01.png" alt="logo">
+    <h1>Admin Page</h1>
+  </header>
+
+  <main>
+
+    <div id="inventoryFormsContainer">
+
+      <form id="beerInventoryForm">
+
+        <h1>Add Beer to Inventory</h1>
+
+        <div id="one">
+          <label>Beer Name</label>
+          <input id="beerName" type="text"><br>
+        </div>
+
+          <div id="two">
+          <label>Beer Type</label>
+          <select id="beerTypeInput" name="beerTypeInput">
+            <option value="IPA">IPA</option>
+            <option value="Pale Ale">Pale Ale</option>
+            <option value="Porter">Porter</option>
+            <option value="Stout">Stout</option>
+            <option value="Hefeweizen">Hefeweizen</option>
+            <option value="Domestic">Domestic</option>
+          </select><br>
+        </div>
+
+        <div id="three">
+          <label>ABV</label>
+          <input id="abv" type="number" step=".01"><br>
+        </div>
+
+        <div id="four">
+          <label>Hop Type</label>
+          <input id="hopType" type="text"><br>
+        </div>
+      
+        <div id="five">
+          <label>Short Description</label>
+          <input id="shortDesc" type="text"><br>
+        </div>
+
+        <div id="six">
+          <label>Long Description</label>
+          <textarea id="longDesc" name="message" rows="10" cols="41">
+          </textarea><br>
+        </div>
+          
+        <button type="submit">Add to Inventory</button>
+
+      </form>
+
+      <div id="inventoryTable">
+        <h1>Current Inventory</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Sale</th>
+              <th>Hide</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id='body'>
+
+          </tbody>
+          <!-- Where beer list inventory items will append to -->
+        </table>
+      </div>
+    </div>
+
+    <form id="announcementBannerForm">
+      <h1>Announcement Banner</h1>
+      <textarea name="announcement" id="announcement" cols="50" rows="3" form="announcementBannerForm"></textarea>
+      <button type="submit" id="update" form="announcementBannerForm">Update</button>
+    </form>
+
+    <form id="passwordResetForm">
+      <h1>Admin Password</h1>
+      <input id="password" type="password">
+      <button type="submit">Change</button>
+    </form>
+
+    
+  </main>
+
+  <footer>
+    <ul>
+      <li>Paul, Ken, Ryan, Peyton</li>
+      <li id="smallLogoContainer"><img id="smallLogo" src="assets/BeerLogo-01.png" alt="smaller logo"></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+    <p>&copy; Quarantini Group</p>
+  </footer>
+  <script type="text/javascript" src=JS/app.js></script>
+  <script type="text/javascript" src="JS/control.js" ></script>
+</body>
+</html>

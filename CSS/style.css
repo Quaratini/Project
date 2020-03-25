@@ -1,0 +1,242 @@
+/* 
+*** Colors and Fonts for Reference ***
+
+Fonts:
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+
+Colors:
+Background - #FAF0CA - Lite Canvas
+Background:2 -  #D6CDAD - Dark Canvas
+
+Text - #231123 - Dark Brown
+
+Dark Main - #0D3B66 -Dark Blue
+Mid Main - #077187 - Mid Teal
+Lite Main - #CCFBFE - Robin Blue
+Highlight - #F4D35E - Yellow
+Mid Highlight - #EE964B - Pale Orange
+Dark Highlight - #F95738 - Bright Orange
+Alt Color - #82204A - Red/Pink
+*/
+
+/* Global */
+
+body {
+  width: 960px;
+  margin: 0 auto;
+  color: #231123;
+  background-color: #FAF0CA;
+}
+
+a {
+  text-decoration: none;
+  color: #F95738;
+}
+
+a:hover {
+  color: #EE964B;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Header */
+header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+#logo {
+  display: inline-block;
+  width: 15%;
+  margin-left: 42.5%;
+}
+
+#social {
+  float: right;
+}
+
+#social li {
+  display: inline-block;
+  padding: 10px;
+}
+
+#nav {
+  display: flex;
+}
+
+#nav li {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 10px 0;
+  color: #0D3B66;
+}
+
+#nav li:hover {
+  color: #077187;
+  cursor: pointer;
+}
+
+
+
+/* Main */
+
+main h1 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main p, li {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#smallLogo {
+  width: 25%;
+  opacity: 0.5;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li{
+  display: inline-block;
+  width: 33.333%;
+  text-align: center;
+  margin-top: 45px;
+}
+
+#smallLogoContainer {
+  margin-top: 0;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Admin Page */
+
+form {
+  border: solid #82204A 3px;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+button {
+  display: block;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #CCFBFE;
+  color: #231123;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+}
+
+#inventoryFormsContainer {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#beerInventoryForm {
+  display: inline-block;
+  width: 33.33%;
+  line-height: 1.5;
+  margin-right: 20px;
+}
+
+#beerInventoryForm input, select {
+  float: right;
+}
+
+#beerInventoryForm textarea {
+  display: block;
+  width: 90%;
+  margin: 10px auto 0 auto;
+}
+
+#beerInventoryForm button {
+  margin: 0 auto;
+}
+
+#one, #two, #three, #four, #five, #six {
+  margin-bottom: 2px;
+}
+
+#beerTypeInput {
+  width: 131px;
+  height: 19px;
+}
+
+#inventoryTable {
+  display: inline-block;
+  width: 66.66%;
+  border: solid #82204A 3px;
+  border-radius: 15px;
+  padding: 25px;
+  overflow: scroll;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+table tr:nth-child(odd) {
+  background-color: #D6CDAD;
+}
+
+table th {
+  padding: 10px;
+  background-color: #82204A;
+}
+
+#announcementBannerForm {
+  display: block;
+  width: 75%;
+  margin: 0px auto 20px auto;
+}
+
+#announcement {
+  width: 100%;
+}
+
+#announcementBannerForm button {
+  margin: 15px auto 0 auto;
+}
+
+#passwordResetForm {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#password {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#passwordResetForm button {
+  margin: 15px auto 0 auto;
+}
+
