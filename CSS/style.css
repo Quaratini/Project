@@ -232,6 +232,32 @@ header h1 {
 }
 
 #beerCardSection div {
+  display: inline-block;
+  width: 145.5px;
+  height: fit-content;
+  background-color: #EE964B;
+  padding: 10px;
+  /* margin: 20px; */
+}
+
+.backgroundImg {
+  display: block;
+  width: 145.5px;
+  filter: invert(100%);
+  }
+
+  .saleImg {
+  
+  }
+
+  #beerCardSelector h2, h3 {
+    display: block;
+   }
+
+  /* #beerCardSelector h3 {
+    display: block;
+  } */
+=======
   width: 25%;
   height: 50%;
   /* background-color:#EE964B ; */
