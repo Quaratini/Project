@@ -91,6 +91,32 @@ header h1 {
 
 
 /* Main */
+#main {
+  display: inline-block;
+  width: 960px;
+}
+#main p {
+color: rgb(138, 8, 8);
+font-family: 'Open Sans Condensed', sans-serif;
+font-size: large;
+width: 45%;
+display: inline-block;
+}
+
+#main iframe {
+  width: 900px;
+  height: 600px;
+  margin-left: 30px;
+}
+
+
+#main img {
+  float: right;
+  width: 520px;
+  height: 320px;
+  /* margin-left: 215px;
+  padding-top: 55px; */
+}
 
 main h1 {
   font-family: 'Ubuntu', sans-serif;
@@ -99,6 +125,7 @@ main h1 {
 main p, li {
   font-family: 'Open Sans Condensed', sans-serif;
 }
+
 
 /* Footer */
 

@@ -51,14 +51,17 @@ function aboutButtonHandler(event) {
         // creates p tag
         var aboutPara = document.createElement('p');
         // creates a text node
-        var aboutNode = document.createTextNode('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. A arcu cursus vitae congue mauris rhoncus. Cursus sit amet dictum sit amet. Amet risus nullam eget felis eget nunc lobortis mattis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Nunc sed augue lacus viverra vitae congue. Consequat nisl vel pretium lectus quam id leo in vitae. Purus in massa tempor nec. Iaculis eu non diam phasellus vestibulum lorem sed risus. Consectetur lorem donec massa sapien faucibus et.');
+        var aboutNode = document.createTextNode('Welcome to Quarantini Hop-Shop. We are a small local PNW brewery located in the heart of Seattle. We brew and carry beers of all backgrounds. We started off brewing in our parents garages. What was originally just a fun off to the side hobby, then turned into a local well known beer brand. We then figured since we\'ve been doing this for so long and had so many request from friends and family, that we\'d go into business.');
         // appened to text node
         aboutPara.appendChild(aboutNode);
         // append to existing elemnt
         var aboutEl = document.getElementById('main');
         aboutEl.appendChild(aboutPara)
-        
-      }
+        var img = document.createElement('img'); 
+            img.src =  
+            'pics/cask.jpeg'; 
+            document.getElementById('main').appendChild(img); 
+          }
       
       aboutUsEl();
     }
@@ -75,11 +78,17 @@ function aboutButtonHandler(event) {
     
       function ourBeersEl() {
         document.getElementById('main').innerHTML = '';
-        var beerPara = document.createElement('p');
-        var beerNode = document.createTextNode('beers beers beers');
-        beerPara.appendChild(beerNode);
-        var beersEl = document.getElementById('main');
-        beersEl.appendChild(beerPara);
+        var mainEl = document.getElementById('main');
+        var beerCard = document.createElement('div');
+        beerCard.setAttribute('id', 'beerCardSection');
+        // var beerNode = document.createTextNode('beerDisplayPanel');
+        mainEl.appendChild(beerCard);
+        var toggleEl = document.createElement('div');
+        toggleEl.setAttribute('id', 'toggleSwitches');
+        beerCard.appendChild(toggleEl);
+        var cardEl = document.createElement('div');
+        cardEl.setAttribute('id', 'cards');
+        beerCard.appendChild(cardEl);
       }
       ourBeersEl();
     }
@@ -94,9 +103,9 @@ function aboutButtonHandler(event) {
       console.log(localStorage.locationsButton);
       function ourLocationEl() {
         document.getElementById('main').innerHTML = '';
-        var locationPara = document.createElement('a');
+        var locationPara = document.createElement('iframe');
         var locationNode = document.createTextNode('Our Location');
-        locationPara.setAttribute('href', 'https://g.page/CodeFellows-Seattle?share');
+        locationPara.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10757.597109467359!2d-122.3517917!3d47.6183694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3d3fd29c55db518!2sCode%20Fellows!5e0!3m2!1sen!2sus!4v1585175602619!5m2!1sen!2sus');
         locationPara.appendChild(locationNode);
         var locationEl = document.getElementById('main');
         locationEl.appendChild(locationPara);
