@@ -113,11 +113,90 @@ header h1 {
   /* placeholder */
 }
 
-#aboutSection img {
-  display: block;
-  width: 520px;
-  height: 320px;
+#aboutUsTitle {
+  font-size: x-large;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #D6CDAD;
+}
+
+#aboutUsText {
+  width: 35%;
+  display: inline-block;
+  font-size: large;
+  padding-right: 100px;
+  padding-top: 30px;
+  padding-left: 80px;
+  text-indent: 25px;
+}
+
+#cask {
+  display: inline-block;
+  width: 420px;
+  height: 280px;
   margin: 0 auto;
+  border-radius: 100px;
+  box-shadow: 10px 10px #D6CDAD;
+}
+
+#party {
+  font-size: x-large;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: rgb(177, 25, 25);
+  text-shadow: 2px 1px black;
+}
+
+#haz1 {
+  display: inline-block;
+  width: 340px;
+  height: 400px;
+  padding: 25px;
+  margin-left: 90px;
+  border-radius: 40px;
+  box-shadow: 10px 10px magenta;
+}
+#haz1:hover {
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+#haz2 {
+  display: inline-block;
+  width: 340px;
+  height: 400px;
+  padding: 25px;
+  border-radius: 40px;
+  box-shadow: 10px 10px magenta;
+}
+
+
+
+#haz3 {
+  display: inline-block;
+  width: 340px;
+  height: 400px;
+  padding: 25px;
+  margin-left: 90px;
+  border-radius: 40px;
+  box-shadow: 10px 10px magenta;
+}
+
+#haz4 {
+  display: inline-block;
+  width: 340px;
+  height: 400px;
+  padding: 25px;
+  border-radius: 40px;
+  box-shadow: 10px 10px magenta;
 }
 
 #beerSection {
@@ -160,6 +239,60 @@ header h1 {
 
 #contactSection {
   /* placeholder */
+}
+
+#name {
+  margin-left: 30.5px;
+  border-radius: 7px;
+
+}
+
+#phone {
+  /* margin-left: 159px; */
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+#email {
+  margin-left: 4px;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+#message {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#contactButton {
+  border-radius: 10px;
+  margin-top: 100px;
+  margin-left: 45%;
+}
+
+#contactButton:hover{
+  background-color: rgb(104, 145, 182);
+  cursor: pointer;
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#messageLabel {
+  
+}
+#contactimg {
+  height: 200px;
+  width: 300px;
+  float: right;
+  border-radius: 30px;
 }
 
 #contactSection p {
@@ -248,16 +381,24 @@ button {
 
 #beerInventoryForm input, select {
   float: right;
+  border-radius: 7px;
 }
 
 #beerInventoryForm textarea {
   display: block;
   width: 90%;
   margin: 10px auto 0 auto;
+  border-radius: 10px;
 }
 
 #beerInventoryForm button {
   margin: 0 auto;
+  border-radius: 10px;
+}
+
+#beerInventoryForm button:hover {
+  background-color: rgb(104, 145, 182);
+  cursor: pointer;
 }
 
 #one, #two, #three, #four, #five, #six {
@@ -267,6 +408,7 @@ button {
 #beerTypeInput {
   width: 131px;
   height: 19px;
+  border-radius: 7px;
 }
 
 #inventoryTable {
@@ -311,10 +453,17 @@ table th {
 
 #announcement {
   width: 100%;
+  border-radius: 10px;
 }
 
 #announcementBannerForm button {
   margin: 15px auto 0 auto;
+  border-radius: 10px;
+}
+
+#announcementBannerForm button:hover {
+  background-color: rgb(104, 145, 182);
+  cursor: pointer;
 }
 
 #passwordResetForm {
@@ -327,8 +476,16 @@ table th {
   display: block;
   width: 50%;
   margin: 0 auto;
+  border-radius: 7px;
 }
 
 #passwordResetForm button {
   margin: 15px auto 0 auto;
+  border-radius: 10px;
 }
+
+#passwordResetForm button:hover {
+  background-color: rgb(104, 145, 182);
+  cursor: pointer;
+}
+
