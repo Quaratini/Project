@@ -230,45 +230,31 @@ header h1 {
 }
 
 #beerCardSection div {
-  width: 30%;
-  height: 35%;
-  background-color:#EE964B ;
   display: inline-block;
-  margin: 15px;
-  z-index: -2;
-  position: relative;
+  width: 145.5px;
+  height: fit-content;
+  background-color: #EE964B;
+  padding: 10px;
+  /* margin: 20px; */
 }
 
 .backgroundImg {
-  width: 50%;
   display: block;
-  left: 50px;
-  bottom: 10px;
+  width: 145.5px;
   filter: invert(100%);
-  position: absolute;
-  z-index: -1;
-  opacity: .4;
   }
 
   .saleImg {
-    width: 45%;
-    position: absolute;
-    right: -15px;
-    bottom: -15px;
-    z-index: 1;
+  
   }
 
-  .beerCardTitle {
+  #beerCardSelector h2, h3 {
     display: block;
-    position: relative;
-    z-index: 2;
    }
 
-  #beerCardSelector h3 {
+  /* #beerCardSelector h3 {
     display: block;
-    position: absolute;
-    z-index: 2;
-  }
+  } */
 
 /* Beer Card Specific CSS */
 #IPA {
