@@ -1,4 +1,5 @@
 /* 
+
 *** Colors and Fonts for Reference ***
 
 Fonts:
@@ -18,6 +19,7 @@ Highlight - #F4D35E - Yellow
 Mid Highlight - #EE964B - Pale Orange
 Dark Highlight - #F95738 - Bright Orange
 Alt Color - #82204A - Red/Pink
+
 */
 
 /* Global */
@@ -45,7 +47,12 @@ h1 {
   margin-bottom: 25px;
 }
 
+p {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
 /* Header */
+
 header {
   width: 100%;
   margin-bottom: 20px;
@@ -72,6 +79,7 @@ header h1 {
 
 #nav {
   display: flex;
+  background-color: #D6CDAD;
 }
 
 #nav li {
@@ -88,48 +96,84 @@ header h1 {
   cursor: pointer;
 }
 
-
+#announcementBar {
+  text-align: center;
+  background-color: #CCFBFE;
+  padding: 10px;
+}
 
 /* Main */
+
 #main {
-  display: inline-block;
-  width: 960px;
+  display: block;
+  width: 100%;
 }
-#main p {
-color: rgb(138, 8, 8);
+
+#aboutSection {
+  /* placeholder */
+}
+
+#aboutSection img {
+  display: block;
+  width: 520px;
+  height: 320px;
+  margin: 0 auto;
+}
+
+#beerSection {
+  display: flex;
+  text-align: center;
+  /* font-family: 'Open Sans Condensed', sans-serif; */
+}
+
+#toggleSwitches {
+  display: inline-block;
+  width: 116px;
+  height: 480px;
+  border: solid #82204A 3px;
+  border-radius: 15px;
+  padding: 25px;
+  margin-right: 20px;
+}
+
+#beerCardSection {
+  display: inline-block;
+  width: 712px;
+  height: 480px;
+  border: solid #82204A 3px;
+  border-radius: 15px;
+  padding: 25px;
+  margin-left: -4px;
+}
+
+#locationSection {
+  /* placeholder */
+}
+
+#locationSection iframe {
+  display: block;
+  border: #D6CDAD solid 10px;
+  width: 640px;
+  height: 426.66px;
+  margin: 0 auto;
+}
+
+#contactSection {
+  /* placeholder */
+}
+
+#contactSection p {
+color: #82204A;
 font-family: 'Open Sans Condensed', sans-serif;
 font-size: large;
 width: 45%;
 display: inline-block;
 }
 
-#main iframe {
-  width: 900px;
-  height: 600px;
-  margin-left: 30px;
-}
-
-
-#main img {
-  float: right;
-  width: 520px;
-  height: 320px;
-  /* margin-left: 215px;
-  padding-top: 55px; */
-}
-
-main h1 {
-  font-family: 'Ubuntu', sans-serif;
-}
-
-main p, li {
-  font-family: 'Open Sans Condensed', sans-serif;
-}
-
-
 /* Footer */
 
 footer {
+  display: block;
   width: 100%;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -158,6 +202,16 @@ footer ul li{
 
 footer p {
   text-align: center;
+}
+
+#link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#link:hover {
+  cursor: pointer;
 }
 
 /* Admin Page */
@@ -189,6 +243,7 @@ button {
   width: 33.33%;
   line-height: 1.5;
   margin-right: 20px;
+  max-height: 497px;
 }
 
 #beerInventoryForm input, select {
@@ -220,6 +275,8 @@ button {
   border: solid #82204A 3px;
   border-radius: 15px;
   padding: 25px;
+  max-width: 66.66%;
+  max-height: 497px;
   overflow: scroll;
 }
 
@@ -234,7 +291,16 @@ table tr:nth-child(odd) {
 
 table th {
   padding: 10px;
+  color: #CCFBFE;
   background-color: #82204A;
+}
+
+.removeButton {
+  display: block;
+  color: #CCFBFE;
+  background-color: #82204A;
+  padding: 10px;
+  margin: 5px auto;
 }
 
 #announcementBannerForm {
@@ -266,4 +332,3 @@ table th {
 #passwordResetForm button {
   margin: 15px auto 0 auto;
 }
-
