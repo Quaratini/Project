@@ -10,11 +10,7 @@ var currentInventory = new Inventory();
 
 // Posts banner as the page loads
 function postBanner() {
-  // grab the annoucement text from local storage and add it to the dom
   var bannerEl = document.getElementById('announcementBar');
-  // var displayAnnouncement = JSON.parse(localStorage.getItem('announcement'));
-  console.log(banner.bannerText);
-
   var announcementEl = document.createElement('h2');
   announcementEl.innerText = banner.bannerText;
   bannerEl.appendChild(announcementEl);
@@ -31,10 +27,10 @@ function hideMainContents() {
 hideMainContents();
 document.getElementById('aboutSection').style.display = 'block';
 
-// Password event handler + listener
+// Gets the password from local storage for the javascript on index.html
 var password = new Password();
 
-
+// Asks for password and only grants access to the admin page with the correct password
 function passwordPrompt() {
   var response = prompt('Please enter password');
   if (response !== password.password) {
@@ -48,7 +44,7 @@ function passwordPrompt() {
 document.getElementById('link').addEventListener('click', passwordPrompt);
 
 
-// Navbar Event Handler and Listener
+// Navbar Event Handler and Listener that chooses what to display based on what is clicked
 function navHandler(event) {
   hideMainContents();
   switch (event.target.id) {
