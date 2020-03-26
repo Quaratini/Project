@@ -7,7 +7,7 @@ banner.textDefault();
 
 var currentInventory = new Inventory();
 currentInventory.loadBeerInventory();
-console.log(currentInventory);
+// console.log(currentInventory);
 
 renderTable();
 
@@ -72,24 +72,37 @@ function showTable() {
 
   for (var i = 0; i < currentInventory.beers.length; i++) {
 
+    // Identify DOM element
     var report = document.getElementById('body');
+    // Creates and sets attributes for 'Sales' checkbox
     var toggleButton = document.createElement('input');
     toggleButton.setAttribute('type', 'checkbox');
-    toggleButton.setAttribute('name', i );
+    toggleButton.setAttribute('id', i );
+    toggleButton.setAttribute('name', 'sale');
+    if (currentInventory.beers[i].sales) {
+      toggleButton.setAttribute('checked', 'true');
+    }
+    // Creates and sets attributes for 'Hide' checkbox
     var toggleButton2 = document.createElement('input');
     toggleButton2.setAttribute('type', 'checkbox');
-    toggleButton2.setAttribute('name', i);
+    toggleButton2.setAttribute('id', i);
+    toggleButton2.setAttribute('name', 'hide');
+    if (!currentInventory.beers[i].display) {
+      toggleButton2.setAttribute('checked', 'true');
+    }
+    // Creates and sets attributes for 'Remove' button
     var deleteButton = document.createElement('button');
     deleteButton.innerText = 'Remove Item';
+    deleteButton.setAttribute('class','removeButton');
     deleteButton.setAttribute('type', 'button');
     deleteButton.setAttribute('name', i);
-
+    // Creates all the table elements
     var tableRow = document.createElement('tr');
     var nameCell = document.createElement('td');
     var saleCell = document.createElement('td');
     var displayCell = document.createElement('td');
     var deleteCell = document.createElement('td');
-
+    // Appends all the elements
     nameCell.textContent = currentInventory.beers[i].beername;
     saleCell.appendChild(toggleButton);
     displayCell.appendChild(toggleButton2);
@@ -117,8 +130,24 @@ document.getElementById('body').addEventListener('click', removeItemFromCart);
 
 // Handler for Toggling Beercard Display
 function displayToggle(event) {
-  console.log(event);
-  // if (event.target.type === checkbox)
-};
+  // console.log(event);
+  if (event.target.name === 'hide') {
+    currentInventory.beers[event.target.id].toggleDisplay();
+    currentInventory.saveToLocalStorage();
+    // console.log(currentInventory);
+  }
+}
 
 document.getElementById('body').addEventListener('click', displayToggle);
+
+// Handler for Toggling Beercard Sales
+function saleToggle(event) {
+  // console.log(event);
+  if (event.target.name === 'sale') {
+    currentInventory.beers[event.target.id].toggleSale();
+    currentInventory.saveToLocalStorage();
+    // console.log(currentInventory);
+  }
+}
+
+document.getElementById('body').addEventListener('click', saleToggle);

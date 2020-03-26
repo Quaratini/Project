@@ -104,5 +104,9 @@ Beercard.prototype.toggleDisplay = function() {
 };
 
 Beercard.prototype.toggleSale = function() {
-  
+  if (this.sales) {
+    this.sales = false;
+  } else {
+    this.sales = true;
+  }
 };

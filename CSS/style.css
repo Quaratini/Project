@@ -154,7 +154,7 @@ button {
 
 #inventoryFormsContainer {
   display: flex;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 #beerInventoryForm {
@@ -162,6 +162,7 @@ button {
   width: 33.33%;
   line-height: 1.5;
   margin-right: 20px;
+  max-height: 497px;
 }
 
 #beerInventoryForm input, select {
@@ -193,6 +194,8 @@ button {
   border: solid #82204A 3px;
   border-radius: 15px;
   padding: 25px;
+  max-width: 66.66%;
+  max-height: 497px;
   overflow: scroll;
 }
 
@@ -207,7 +210,16 @@ table tr:nth-child(odd) {
 
 table th {
   padding: 10px;
+  color: #CCFBFE;
   background-color: #82204A;
+}
+
+.removeButton {
+  display: block;
+  color: #CCFBFE;
+  background-color: #82204A;
+  padding: 10px;
+  margin: 5px auto;
 }
 
 #announcementBannerForm {
