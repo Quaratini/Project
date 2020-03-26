@@ -16,11 +16,10 @@
   </header>
 
   <main>
-
+    <!-- Contains the Beercard form and the control page display -->
     <div id="inventoryFormsContainer">
-
+      <!-- Form to Create new Beers/Beercards -->
       <form id="beerInventoryForm">
-
         <h1>Add Beer to Inventory</h1>
 
         <div id="one">
@@ -62,9 +61,9 @@
         </div>
           
         <button type="submit">Add to Inventory</button>
-
       </form>
 
+      <!-- The control page display for the Beers/Beercards -->
       <div id="inventoryTable">
         <h1>Current Inventory</h1>
         <table>
@@ -77,26 +76,25 @@
             </tr>
           </thead>
           <tbody id='body'>
-
+            <!-- Beercard info appended here -->
           </tbody>
-          <!-- Where beer list inventory items will append to -->
         </table>
       </div>
     </div>
 
+    <!-- Form to adjust the index.html banner -->
     <form id="announcementBannerForm">
       <h1>Announcement Banner</h1>
       <textarea name="announcement" id="announcement" cols="50" rows="3" form="announcementBannerForm"></textarea>
       <button type="submit" id="update" form="announcementBannerForm">Update</button>
     </form>
 
+    <!-- Form to change the password to enter the control.html page -->
     <form id="passwordResetForm">
       <h1>Admin Password</h1>
       <input id="password" type="password">
       <button type="submit">Change</button>
     </form>
-
-    
   </main>
 
   <footer>
@@ -107,6 +105,7 @@
     </ul>
     <p>&copy; Quarantini Group</p>
   </footer>
+
   <script type="text/javascript" src=JS/app.js></script>
   <script type="text/javascript" src="JS/control.js" ></script>
 </body>

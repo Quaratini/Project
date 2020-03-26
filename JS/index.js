@@ -2,28 +2,35 @@
 
 // *** This page is where functions specific to the home page are colled *** //
 
+// Instantiates banner object
 var banner = new Banner;
 
+// Instantiates inventory object
 var currentInventory = new Inventory();
 
+// Posts banner as the page loads
 function postBanner() {
-  // grab the annoucement text from local storage and add it to the dom
   var bannerEl = document.getElementById('announcementBar');
-  // var displayAnnouncement = JSON.parse(localStorage.getItem('announcement'));
-  console.log(banner.bannerText);
-
   var announcementEl = document.createElement('h2');
   announcementEl.innerText = banner.bannerText;
   bannerEl.appendChild(announcementEl);
-
 }
-
 postBanner();
 
-// Password material
+// Sets the Page up correctly upon entering site
+function hideMainContents() {
+  document.getElementById('aboutSection').style.display = 'none';
+  document.getElementById('beerSection').style.display = 'none';
+  document.getElementById('locationSection').style.display = 'none';
+  document.getElementById('contactSection').style.display = 'none';
+}
+hideMainContents();
+document.getElementById('aboutSection').style.display = 'block';
+
+// Gets the password from local storage for the javascript on index.html
 var password = new Password();
 
-
+// Asks for password and only grants access to the admin page with the correct password
 function passwordPrompt() {
   var response = prompt('Please enter password');
   if (response !== password.password) {
@@ -32,14 +39,12 @@ function passwordPrompt() {
   } else {
     window.location.href = 'control.html';
   }
-
 }
-
 
 document.getElementById('link').addEventListener('click', passwordPrompt);
 
-// nav bar eventlisteners and handler\
 
+<<<<<<< HEAD
 // About Us button handler
 
 function aboutButtonHandler(event) {
@@ -120,11 +125,25 @@ function contactButtonHandler(event) {
     contactPara.appendChild(contactNode);
     var contactEl = document.getElementById('main');
     contactEl.appendChild(contactPara);
+=======
+// Navbar Event Handler and Listener that chooses what to display based on what is clicked
+function navHandler(event) {
+  hideMainContents();
+  switch (event.target.id) {
+  case 'aboutUs':
+    document.getElementById('aboutSection').style.display = 'block';
+    break;
+  case 'ourBeers':
+    document.getElementById('beerSection').style.display = 'block';
+    break;
+  case 'locations':
+    document.getElementById('locationSection').style.display = 'block';
+    break;
+  case 'contactUs':
+    document.getElementById('contactSection').style.display = 'block';
+    break;
+>>>>>>> c4ae899de0b7323fd2b7126b0833e77a8d48bcbe
   }
-  contactUsEl();
 }
 
-document.getElementById('contactUs').addEventListener('click', contactButtonHandler)
-
-
-
+document.getElementById('nav').addEventListener('click', navHandler);
