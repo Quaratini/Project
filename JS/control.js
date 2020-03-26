@@ -2,13 +2,15 @@
 
 // *** This page is where functions specific to the control page are colled *** //
 
+// Instantiates banner object
 var banner = new Banner();
 banner.textDefault();
 
+// Instantiates inventory object
 var currentInventory = new Inventory();
 currentInventory.loadBeerInventory();
-// console.log(currentInventory);
 
+// Renders the table upon entry to this page
 renderTable();
 
 // Function that grabs form input from beerInventoryForm and uses its information to create Beercard instances
@@ -27,7 +29,7 @@ function createBeercard() {
 }
 
 
-// Announcement Handler + Listener
+// Announcement Handler and Listener that saves current banner text to local storage
 function announcementHandler(event) {
   event.preventDefault();
   localStorage.setItem('announcement', JSON.stringify(document.getElementById('announcement').value));
@@ -36,7 +38,7 @@ function announcementHandler(event) {
 
 document.getElementById('announcementBannerForm').addEventListener('submit', announcementHandler);
 
-// Password Handler + Listener
+// Password Handler and Listener that saves current password to local storage
 function passwordHandler(event) {
   event.preventDefault();
   localStorage.setItem('password', JSON.stringify(document.getElementById('password').value));
@@ -45,18 +47,18 @@ function passwordHandler(event) {
 
 document.getElementById('passwordResetForm').addEventListener('submit', passwordHandler);
 
-// Beer Form Handler + Listener
+// Beer Form Handler and Listener that grabs info from the beercard form, creates a Beercard object,
+//      adds it to the Inventory object, saves it to local storage, and redraws the chart
 function beerFormHandler(event){
   event.preventDefault();
   createBeercard();
   currentInventory.saveToLocalStorage();
   renderTable();
-  // console.log(currentInventory);
 }
 
 document.getElementById('beerInventoryForm').addEventListener('submit', beerFormHandler);
 
-// Takes Care of Making the Inventory Table
+// Takes Care of Making the Inventory Table by clearing it then redrawing it
 function renderTable() {
   clearTable();
   showTable();
@@ -117,7 +119,7 @@ function showTable() {
   }
 }
 
-// Handler for removing selected item from Beer Inventory + Listener
+// Handler and Listener for removing selected item from Beer Inventory
 function removeItemFromCart(event) {
   if (event.target.type === 'button') {
     currentInventory.removeItem(event.target.name);
@@ -128,7 +130,7 @@ function removeItemFromCart(event) {
 
 document.getElementById('body').addEventListener('click', removeItemFromCart);
 
-// Handler for Toggling Beercard Display
+// Handler and Listener for Toggling Beercard Display
 function displayToggle(event) {
   // console.log(event);
   if (event.target.name === 'hide') {
@@ -140,7 +142,7 @@ function displayToggle(event) {
 
 document.getElementById('body').addEventListener('click', displayToggle);
 
-// Handler for Toggling Beercard Sales
+// Handler and Listener for Toggling Beercard Sales
 function saleToggle(event) {
   // console.log(event);
   if (event.target.name === 'sale') {

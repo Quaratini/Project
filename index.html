@@ -17,6 +17,7 @@
       <li><a href=""><img src="assets/insta-icon.png" alt="instagram"></a></li>
       <li><a href=""><img src="assets/twit-icon.png" alt="twitter"></a></li>
     </ul>
+
     <ul id="nav">
       <li id ="aboutUs">About Us</li>
       <li id="ourBeers">Our Beers</li>
@@ -28,30 +29,45 @@
   </header>
   
   <main id='main'>
-    
-    <div id="toggle"></div>
-    <div id="cards"></div>
-    <!--
-      *** This container will hold all of the divs that will change according to which feature on the nav bar is clicked ***
-      - About Us
-    - Our Beers
-    - Locations
-    - Contact Us
-    -->
-    
+    <!-- About Us Section -->
+    <section id="aboutSection">
+      <h1>Welcome to Quarantini Hop-Shop. We are a small local PNW brewery located in the heart of Seattle. We brew and carry beers of all backgrounds. We started off brewing in our parents garages. What was originally just a fun off to the side hobby, then turned into a local well known beer brand. We then figured since we've been doing this for so long and had so many request from friends and family, that we'd go into business.</h1>
+      <img src="pics/cask.jpeg" alt="beer barrel">
+    </section>
+
+    <!-- Our Beers Section -->
+    <section id="beerSection">
+      <h1>Check Out Our Beers!</h1>
+      <div id="toggleSwitches">
+        <h2>Filters</h2>
+      </div>
+      <div id="beerCardSection">
+        <h2>Beer List</h2>
+      </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locationSection">
+      <h1>Our Location</h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10757.597109467359!2d-122.3517917!3d47.6183694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3d3fd29c55db518!2sCode%20Fellows!5e0!3m2!1sen!2sus!4v1585175602619!5m2!1sen!2sus" frameborder="0"></iframe>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contactSection">
+      <h1>Contact Info</h1>
+      <p>Phone: (555)-555-5555</p>
+      <p>Email: welovebeer@gmail.com</p>
+    </section>
   </main>
   
   <footer>
     <ul>
       <li>Paul, Ken, Ryan, Peyton</li>
       <li id="smallLogoContainer"><img id="smallLogo" src="assets/BeerLogo-01.png" alt="smaller logo"></li>
-      <li id="link">Control Panel</li>
+      <li><p id="link">Control Panel</p></li>
     </ul>
     <p>&copy; Quarantini Group</p>
   </footer>
-  
-  
-
   
   <script src='JS/app.js'></script>
   <script src="JS/index.js"></script>
