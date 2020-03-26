@@ -54,9 +54,9 @@ var Inventory = function(){
   this.beers = [];
 };
 
-Inventory.prototype.addInventory = function() {
-  this.beers.push(new Beercard());
-};
+// Inventory.prototype.addInventory = function() {
+//   this.beers.push(new Beercard());
+// };
 
 Inventory.prototype.saveToLocalStorage = function(){
   localStorage.setItem('beerInventory', JSON.stringify(this.beers));
@@ -64,6 +64,18 @@ Inventory.prototype.saveToLocalStorage = function(){
 
 Inventory.prototype.loadBeerInventory = function(){
   this.beers = JSON.parse(localStorage.getItem('beerInventory')) || [];
+  for (var i = 0; i < this.beers.length; i++) {
+    this.beers[i] = new Beercard(
+      this.beers[i].beername,
+      this.beers[i].beertype,
+      this.beers[i].abv,
+      this.beers[i].hopType,
+      this.beers[i].shortDescription,
+      this.beers[i].longDescription,
+      this.beers[i].display,
+      this.beers[i].sales,
+    )
+  };
 };
 
 Inventory.prototype.removeItem = function(item){
@@ -71,15 +83,30 @@ Inventory.prototype.removeItem = function(item){
 };
 
 
-var Beercard = function(){
-  this.beername = document.getElementById('beerName').value;
-  this.beertype = document.getElementById('beerTypeInput').value;
-  this.abv = document.getElementById('abv').value;
-  this.hopType = document.getElementById('hopType').value;
-  this.shortDescription = document.getElementById('shortDesc').value;
-  this.longDescription = document.getElementById('longDesc').value;
+var Beercard = function(a, b, c, d, e, f, g, h){
+  this.beername = a;
+  this.beertype = b;
+  this.abv = c;
+  this.hopType = d;
+  this.shortDescription = e;
+  this.longDescription = f;
 
-  this.display = true;
-  this.sales = false;
+  this.display = g;
+  this.sales = h;
 };
 
+Beercard.prototype.toggleDisplay = function() {
+  if (this.display) {
+    this.display = false;
+  } else {
+    this.display = true;
+  }
+};
+
+Beercard.prototype.toggleSale = function() {
+  if (this.sales) {
+    this.sales = false;
+  } else {
+    this.sales = true;
+  }
+};
