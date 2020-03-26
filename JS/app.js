@@ -134,10 +134,10 @@ Inventory.prototype.writeCards = function(){
     shortDescription.className = 'beerCardshortDescription';
     card.appendChild(shortDescription);
 
-    var longDescription = document.createElement('h3');
+    var longDescription = document.createElement('h4');
     longDescription.innerText = this.beers[i].longDescription;
     longDescription.className = 'beerCardlongDescription';
-    longDescription.style.display = 'none';
+    // longDescription.style.display = 'none';
     card.appendChild(longDescription);
 
     main.appendChild(card);
