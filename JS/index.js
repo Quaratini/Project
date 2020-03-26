@@ -76,7 +76,7 @@ function aboutButtonHandler(event) {
       function ourBeersEl() {
         document.getElementById('main').innerHTML = '';
         var beerPara = document.createElement('p');
-        var beerNode = document.createTextNode('beers beers beers');
+        var beerNode = document.createTextNode('beer');
         beerPara.appendChild(beerNode);
         var beersEl = document.getElementById('main');
         beersEl.appendChild(beerPara);
@@ -94,9 +94,9 @@ function aboutButtonHandler(event) {
       console.log(localStorage.locationsButton);
       function ourLocationEl() {
         document.getElementById('main').innerHTML = '';
-        var locationPara = document.createElement('a');
+        var locationPara = document.createElement('iframe');
         var locationNode = document.createTextNode('Our Location');
-        locationPara.setAttribute('href', 'https://g.page/CodeFellows-Seattle?share');
+        locationPara.setAttribute('src', 'https://g.page/CodeFellows-Seattle?share');
         locationPara.appendChild(locationNode);
         var locationEl = document.getElementById('main');
         locationEl.appendChild(locationPara);
