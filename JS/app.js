@@ -22,7 +22,7 @@ Banner.prototype.announcementHandler = function(event) {
   localStorage.setItem('announcement', JSON.stringify(document.getElementById('announcement').value));
   console.log(localStorage.announcement);
 };
- // Preloads the banner content into its update form on control.hmtl
+// Preloads the banner content into its update form on control.hmtl
 Banner.prototype.textDefault = function() {
   document.getElementById('announcement').value = this.bannerText;
 };
@@ -72,14 +72,77 @@ Inventory.prototype.loadBeerInventory = function(){
       this.beers[i].shortDescription,
       this.beers[i].longDescription,
       this.beers[i].display,
-      this.beers[i].sales,
-    )
-  };
+      this.beers[i].sales
+    );
+  }
 };
 
 // Removes Beercard item from current page's inventory
 Inventory.prototype.removeItem = function(item){
   this.beers.splice(item, 1);
+};
+
+// Create BeerCards on Index page
+Inventory.prototype.writeCards = function(){
+  var main = document.getElementById('beerCardSection');
+  main.innerHTML= '';
+
+  for (var i = 0; i < currentInventory.beers.length; i++) {
+    var card = document.createElement('div');
+    card.className = this.beers[i].beertype;
+
+    if (!this.beers[i].display) {
+      card.style.display = 'none';
+    }
+
+    var backgroundImg = document.createElement('img');
+    backgroundImg.src = 'assets/Hop.png';
+    backgroundImg.className = 'backgroundImg';
+    card.appendChild(backgroundImg);
+
+    var saleImg = document.createElement('img');
+    saleImg.src = 'assets/sale-tag.png';
+    saleImg.className = 'saleImg';
+    card.appendChild(saleImg);
+
+    if (!this.beers[i].sales) {
+      saleImg.style.display ='none';
+    }
+
+    var title = document.createElement('h2');
+    title.innerText = this.beers[i].beername;
+    title.className = 'beerCardTitle';
+    card.appendChild(title);
+
+    var type = document.createElement('h3');
+    type.innerText = this.beers[i].beertype;
+    type.className = 'beerCardType';
+    card.appendChild(type);
+
+    var abv = document.createElement('h3');
+    abv.innerText = (this.beers[i].abv + '%');
+    abv.className = 'beerCardAbv';
+    card.appendChild(abv);
+
+    var hopType = document.createElement('h3');
+    hopType.innerText = this.beers[i].hopType;
+    hopType.className = 'beerCardhopType';
+    card.appendChild(hopType);
+
+    var shortDescription = document.createElement('h3');
+    shortDescription.innerText = this.beers[i].shortDescription;
+    shortDescription.className = 'beerCardshortDescription';
+    card.appendChild(shortDescription);
+
+    var longDescription = document.createElement('h3');
+    longDescription.innerText = this.beers[i].longDescription;
+    longDescription.className = 'beerCardlongDescription';
+    longDescription.style.display = 'none';
+    card.appendChild(longDescription);
+
+    main.appendChild(card);
+  }
+
 };
 
 // Reinstantiates beer objects as Beercards

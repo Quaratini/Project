@@ -2,11 +2,16 @@
 
 // *** This page is where functions specific to the home page are colled *** //
 
+
 // Instantiates banner object
 var banner = new Banner;
 
 // Instantiates inventory object
 var currentInventory = new Inventory();
+currentInventory.loadBeerInventory();
+
+// Writes currentInventory beer cards to the beer card section
+currentInventory.writeCards();
 
 // Posts banner as the page loads
 function postBanner() {
@@ -64,3 +69,4 @@ function navHandler(event) {
 }
 
 document.getElementById('nav').addEventListener('click', navHandler);
+
