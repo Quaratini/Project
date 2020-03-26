@@ -132,7 +132,7 @@ document.getElementById('body').addEventListener('click', removeItemFromCart);
 
 // Handler and Listener for Toggling Beercard Display
 function displayToggle(event) {
-  console.log(event);
+  // console.log(event);
   if (event.target.name === 'hide') {
     currentInventory.beers[event.target.id].toggleDisplay();
     currentInventory.saveToLocalStorage();
