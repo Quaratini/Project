@@ -1,17 +1,12 @@
 /* 
-
 *** Colors and Fonts for Reference ***
-
 Fonts:
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Open Sans Condensed', sans-serif;
-
 Colors:
 Background - #FAF0CA - Lite Canvas
 Background:2 -  #D6CDAD - Dark Canvas
-
 Text - #231123 - Dark Brown
-
 Dark Main - #0D3B66 -Dark Blue
 Mid Main - #077187 - Mid Teal
 Lite Main - #CCFBFE - Robin Blue
@@ -19,7 +14,6 @@ Highlight - #F4D35E - Yellow
 Mid Highlight - #EE964B - Pale Orange
 Dark Highlight - #F95738 - Bright Orange
 Alt Color - #82204A - Red/Pink
-
 */
 
 /* Global */
@@ -798,4 +792,3 @@ table th {
   background-color: rgb(104, 145, 182);
   cursor: pointer;
 }
-
