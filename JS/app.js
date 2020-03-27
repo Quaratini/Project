@@ -77,6 +77,27 @@ Inventory.prototype.loadBeerInventory = function(){
   }
 };
 
+// Grabs ONLY the beer items that we want to be shown on the home page
+Inventory.prototype.loadVisibleBeers = function(){
+  this.beers = JSON.parse(localStorage.getItem('beerInventory')) || [];
+  for (var i = 0; i < this.beers.length; i++) {
+    if (this.beers[i].display) {
+      this.beers[i] = new Beercard(
+        this.beers[i].beername,
+        this.beers[i].beertype,
+        this.beers[i].abv,
+        this.beers[i].hopType,
+        this.beers[i].shortDescription,
+        this.beers[i].longDescription,
+        this.beers[i].display,
+        this.beers[i].sales
+      );
+    } else {
+      this.beers.splice(i, 1);
+    }
+  }
+};
+
 // Removes Beercard item from current page's inventory
 Inventory.prototype.removeItem = function(item){
   this.beers.splice(item, 1);

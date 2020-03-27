@@ -8,7 +8,12 @@ var banner = new Banner;
 
 // Instantiates inventory object
 var currentInventory = new Inventory();
-currentInventory.loadBeerInventory();
+currentInventory.loadVisibleBeers();
+
+// // Resets the checkboxes
+// for (var i = 0; i < document.getElementsByName('beerFilter'); i++) {
+//   document.getElementsByName('beerFilter')[i].checked = false;
+// }
 
 // Writes currentInventory beer cards to the beer card section
 currentInventory.writeCards();
@@ -58,6 +63,10 @@ function navHandler(event) {
     break;
   case 'ourBeers':
     document.getElementById('beerSection').style.display = 'block';
+    // Resets the checkboxes
+    // for (var i = 0; i < document.getElementsByName('beerFilter'); i++) {
+    //   document.getElementsByName('beerFilter')[i].checked = false;
+    // }
     break;
   case 'locations':
     document.getElementById('locationSection').style.display = 'block';
@@ -117,7 +126,6 @@ function filterHandler(event) {
 
       // If any beercards have a beertype of Pale Ale, then their display property will be set to true
       if (document.getElementsByClassName('beerFilter')[1].checked === true) {
-        console.log('test2');
         for (var i = 0; i < currentInventory.beers.length; i++) {
           if (currentInventory.beers[i].beertype === 'Pale Ale' ) {
             currentInventory.beers[i].display = true;
