@@ -11,43 +11,97 @@
 <body>
 
   <header>
-    <img src="" alt="logo">
+    <img id="logo" src='assets/iconfinder_beer_811447.png' alt="logo">
     <ul id="social">
-      <li><a href=""><img src="" alt="facebook"></a></li>
-      <li><a href=""><img src="" alt="instagram"></a></li>
-      <li><a href=""><img src="" alt="twitter"></a></li>
+      <li><a href=""><img src="assets/fb-icon.png" alt="facebook"></a></li>
+      <li><a href=""><img src="assets/insta-icon.png" alt="instagram"></a></li>
+      <li><a href=""><img src="assets/twit-icon.png" alt="twitter"></a></li>
     </ul>
+
     <ul id="nav">
-      <li>About Us</li>
-      <li>Our Beers</li>
-      <li>Locations</li>
-      <li>Contact Us</li>
+      <li id ="aboutUs">About Us</li>
+      <li id="ourBeers">Our Beers</li>
+      <li id=locations>Locations</li>
+      <li id="contactUs">Contact Us</li>
     </ul>
+    <div id="announcementBar">
+    </div>
   </header>
+  
+  <main id='main'>
+    <!-- About Us Section -->
+    <section id="aboutSection">
+      <h1 id=aboutUsTitle>Who We Are</h1>
+      <p id='aboutUsText'>Welcome to Quarantini Hop-Shop. We are a small local PNW brewery located in the heart of Seattle. We brew and carry beers of all backgrounds. We started off brewing in our parents garages. What was originally just a fun off to the side hobby, then turned into a local well known beer brand. We then figured since we've been doing this for so long and had so many request from friends and family, that we'd go into business.</p>
+      <img id='cask' src="pics/cask.jpeg" alt="beer barrel">
+      <h1 id='party'>Quarantini Party</h1>
+      <img id='haz1' src='pics/hazmat1.jpeg'>
+      <img id='haz2' src='pics/hazmat2.jpeg'>
+      <img id='haz3' src='pics/hazmat3.jpeg'>
+      <img id='haz4' src='pics/hazmat4.jpeg'>
+    </section>
 
-  <main id="siteContent">
-    <!--
-      *** This container will hold all of the divs that will change according to which feature on the nav bar is clicked ***
-    - About Us
-    - Our Beers
-    - Locations
-    - Contact Us
-    -->
+    <!-- Our Beers Section -->
+    <section id="beerSection">
+      <h1>Check Out Our Beers!</h1>
+      
+      <div id="toggleSwitches">
+        <h2>Filters</h2>
+          <form name='toggles'>
+            <label>IPA</label>
+            <input type="checkbox" class='beerFilter' id='IPA'><br>
+            <label>Pale Ale</label>
+            <input type="checkbox" class='beerFilter' id='Pale Ale'><br>
+            <label>Porter</label>
+            <input type="checkbox" class='beerFilter' id='Porter'><br>
+            <label>Stout</label>
+            <input type="checkbox" class='beerFilter' id='Stout'><br>
+            <label>Hefewiezen</label>
+            <input type="checkbox" class='beerFilter' id='Hefeweizen'><br>
+            <label>Domestic</label>
+            <input type="checkbox" class='beerFilter' id='Domestic'><br>
+          </form>
+      </div>
 
+      <div id="beerCardSection">
+        <h2>Beer List</h2>
+      </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locationSection">
+      <h1>Our Location</h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10757.597109467359!2d-122.3517917!3d47.6183694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3d3fd29c55db518!2sCode%20Fellows!5e0!3m2!1sen!2sus!4v1585175602619!5m2!1sen!2sus" frameborder="0"></iframe>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contactSection">
+      <h1>Send us a message!</h1>
+      <form id='contact' action="https://formspree.io/xjvozpye" method="POST">
+        <img id='contactimg' src='pics/women.jpeg'>
+        <label>Please enter your full name</label>
+        <input type='text' id='name' name='name'><br>
+        <label>Please enter your phone number</label>
+        <input type='text' id='phone' name='phone'><br>
+        <label>Please enter your email address</label>
+        <input type='text' id='email' name='email'><br>
+        <label id='messageLabel'>Leave us a message</label>
+        <textarea name='message' id='message' cols='50' rows='3'></textarea>
+        <button type='submit' id='contactButton'>Submit</button>
+      </form>
+    </section>
   </main>
-
+  
   <footer>
-    <a href="control.html">Control Panel</a>
     <ul>
-      <li><img src="" alt="smaller logo"></li>
-      <li>Paul, Ken, Ryan, Peyton</li>
-      <li>&copy; Quarantini Group</li>
+      <li>Paul, Ken, Ryan, Peyton.</li>
+      <li id="smallLogoContainer"><img id="smallLogo" src='assets/iconfinder_beer_811447.png'alt="smaller logo"></li>
+      <li><p id="link">Control Panel</p></li>
     </ul>
+    <p>&copy; Quarantini Group</p>
   </footer>
   
-
-
-
-
+  <script src='JS/app.js'></script>
+  <script src="JS/index.js"></script>
 </body>
 </html>
