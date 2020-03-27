@@ -94,8 +94,33 @@ header h1 {
 
 #announcementBar {
   text-align: center;
-  background-color: #CCFBFE;
+  /* background-color: #CCFBFE; */
   padding: 10px;
+}
+
+#announcementBar h2 {
+  font-size: xx-large;
+  font-family: 'Ubuntu', sans-serif;
+  color: #82204A;
+  animation-name: scroll;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    scale: 1.1;
+  }
+  50% {
+    opacity: .5;
+    scale: 1.05;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 /* Main */
@@ -111,9 +136,11 @@ header h1 {
 
 #aboutUsTitle {
   font-size: x-large;
-  padding-top: 30px;
+  font-family: 'Ubuntu', sans-serif;
+
+  /* padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #D6CDAD;
+  background-color: #D6CDAD; */
 }
 
 #aboutUsText {
@@ -129,28 +156,56 @@ header h1 {
 #cask {
   display: inline-block;
   width: 420px;
-  height: 280px;
   margin: 0 auto;
-  border-radius: 100px;
-  box-shadow: 10px 10px #D6CDAD;
+  border-radius: 100%;
+  box-shadow: 0px 100px 20px #D6CDAD;
 }
 
 #party {
   font-size: x-large;
   padding-top: 60px;
-  padding-bottom: 30px;
-  color: rgb(177, 25, 25);
-  text-shadow: 2px 1px black;
+  color: #0D3B66;
+  font-family: 'Ubuntu', sans-serif;
+  animation-name: party;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition: ease-out;
+}
+
+@keyframes party {
+  0% {
+    color: #0D3B66;
+    transform: rotate(10deg);
+  }
+  20% {
+    color: #077287;
+    transform: rotate(-10deg);
+  }
+  40% {
+    color: #077187;
+    transform: rotate(10deg);
+  }
+  60% {
+    color: #EE964B;
+    transform: rotate(-10deg);
+  }
+  80% {
+    color: #F95738;
+    transform: rotate(10deg);
+  }
+  100% {
+    color: #82204A;
+    transform: rotate(-10deg);
+  }
 }
 
 #haz1 {
   display: inline-block;
-  width: 340px;
-  height: 400px;
-  padding: 25px;
-  margin-left: 90px;
-  border-radius: 40px;
-  box-shadow: 10px 10px magenta;
+  width: 20%;
+  margin:10px;
+  margin-left: 50px;
+  border-radius: 100%;
+  box-shadow: 10px 10px 10px #231123;
 }
 #haz1:hover {
   transition: 0.70s;
@@ -167,32 +222,26 @@ header h1 {
 
 #haz2 {
   display: inline-block;
-  width: 340px;
-  height: 400px;
-  padding: 25px;
-  border-radius: 40px;
-  box-shadow: 10px 10px magenta;
+  width: 20%;
+  margin:10px;
+  border-radius: 100%;
+  box-shadow: 10px 10px 10px #231123;
 }
-
-
 
 #haz3 {
   display: inline-block;
-  width: 340px;
-  height: 400px;
-  padding: 25px;
-  margin-left: 90px;
-  border-radius: 40px;
-  box-shadow: 10px 10px magenta;
+  width: 20%;
+margin:10px;
+  border-radius: 100%;
+  box-shadow: 10px 10px 10px #231123;
 }
 
 #haz4 {
   display: inline-block;
-  width: 340px;
-  height: 400px;
-  padding: 25px;
-  border-radius: 40px;
-  box-shadow: 10px 10px magenta;
+  width: 20%;
+margin:10px;
+  border-radius: 100%;
+  box-shadow: 10px 10px 10px #231123;
 }
 
 #beerSection {
@@ -203,21 +252,42 @@ header h1 {
 
 #toggleSwitches {
   display: inline-block;
-  width: 116px;
-  height: 480px;
-  border: solid #82204A 3px;
+  width: 200px;
+  height: fit-content;
+  /* border: solid #82204A 3px; */
   border-radius: 15px;
   padding: 25px;
   margin-right: 20px;
 }
 
+#toggleSwitches label, h2{
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: inline-block;
+}
+
+#toggleSwitches input {
+  display: inline-block;
+  margin-bottom: 5px;
+
+}
 /* General Styling for the Beer Cards */
 
+#beerSection {
+  position: relative;
+}
+
+#toggleSwitches {
+  position: fixed;
+  top: 300px;
+  right: 50px;
+  /* display: fixed; */
+}
+
 #beerCardSection {
-  display: inline-block;
-  width: 712px;
+  display: block;
+  width: 700px;
   height: fit-content;
-  border: solid #82204A 3px;
+  /* border: solid #82204A 3px; */
   border-radius: 15px;
   padding: 25px;
   margin-left: -4px;
@@ -234,6 +304,7 @@ header h1 {
   /* z-index: 3; */
   position: relative;
   border-radius: 25px;
+  box-shadow: #231123 10px 10px 30px;
 }
 
 .backgroundImg {
@@ -589,23 +660,21 @@ transition: 500ms;
   transform: rotate(180deg);
 }
 
-#messageLabel {
-  
-}
+
 #contactimg {
   height: 200px;
   width: 300px;
   float: right;
-  border-radius: 30px;
+  border-radius: 100%;
 }
 
-#contactSection p {
+#contactSection label {
 color: #82204A;
 font-family: 'Open Sans Condensed', sans-serif;
 font-size: large;
-width: 45%;
-display: inline-block;
+/* display: inline-block; */
 }
+
 
 /* Footer */
 
@@ -654,9 +723,10 @@ footer p {
 /* Admin Page */
 
 form {
-  border: solid #82204A 3px;
+  /* border: solid rgb(109, 41, 70) 3px; */
   border-radius: 15px;
   padding: 25px;
+  margin: 15px;
 }
 
 button {
