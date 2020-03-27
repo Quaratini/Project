@@ -1,17 +1,12 @@
 /* 
-
 *** Colors and Fonts for Reference ***
-
 Fonts:
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Open Sans Condensed', sans-serif;
-
 Colors:
 Background - #FAF0CA - Lite Canvas
 Background:2 -  #D6CDAD - Dark Canvas
-
 Text - #231123 - Dark Brown
-
 Dark Main - #0D3B66 -Dark Blue
 Mid Main - #077187 - Mid Teal
 Lite Main - #CCFBFE - Robin Blue
@@ -19,7 +14,6 @@ Highlight - #F4D35E - Yellow
 Mid Highlight - #EE964B - Pale Orange
 Dark Highlight - #F95738 - Bright Orange
 Alt Color - #82204A - Red/Pink
-
 */
 
 /* Global */
@@ -66,6 +60,8 @@ header h1 {
   display: inline-block;
   width: 15%;
   margin-left: 42.5%;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 #social {
@@ -113,11 +109,90 @@ header h1 {
   /* placeholder */
 }
 
-#aboutSection img {
-  display: block;
-  width: 520px;
-  height: 320px;
+#aboutUsTitle {
+  font-size: x-large;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #D6CDAD;
+}
+
+#aboutUsText {
+  width: 35%;
+  display: inline-block;
+  font-size: large;
+  padding-right: 100px;
+  padding-top: 30px;
+  padding-left: 80px;
+  text-indent: 25px;
+}
+
+#cask {
+  display: inline-block;
+  width: 420px;
+  height: 280px;
   margin: 0 auto;
+  border-radius: 100px;
+  box-shadow: 10px 10px #D6CDAD;
+}
+
+#party {
+  font-size: x-large;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: rgb(177, 25, 25);
+  text-shadow: 2px 1px black;
+}
+
+#haz1 {
+  display: inline-block;
+  width: 340px;
+  height: 400px;
+  padding: 25px;
+  margin-left: 90px;
+  border-radius: 40px;
+  box-shadow: 10px 10px magenta;
+}
+#haz1:hover {
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+#haz2 {
+  display: inline-block;
+  width: 340px;
+  height: 400px;
+  padding: 25px;
+  border-radius: 40px;
+  box-shadow: 10px 10px magenta;
+}
+
+
+
+#haz3 {
+  display: inline-block;
+  width: 340px;
+  height: 400px;
+  padding: 25px;
+  margin-left: 90px;
+  border-radius: 40px;
+  box-shadow: 10px 10px magenta;
+}
+
+#haz4 {
+  display: inline-block;
+  width: 340px;
+  height: 400px;
+  padding: 25px;
+  border-radius: 40px;
+  box-shadow: 10px 10px magenta;
 }
 
 #beerSection {
@@ -136,14 +211,322 @@ header h1 {
   margin-right: 20px;
 }
 
+/* General Styling for the Beer Cards */
+
 #beerCardSection {
   display: inline-block;
   width: 712px;
-  height: 480px;
+  height: fit-content;
   border: solid #82204A 3px;
   border-radius: 15px;
   padding: 25px;
   margin-left: -4px;
+  /* z-index: 3; */
+
+}
+
+#beerCardSection div {
+  width: 25%;
+  height: 50%;
+  /* background-color:#EE964B ; */
+  display: inline-block;
+  margin: 15px;
+  /* z-index: 3; */
+  position: relative;
+  border-radius: 25px;
+}
+
+.backgroundImg {
+  width: 50%;
+  /* display: block; */
+  left: 50px;
+  bottom: 15%;
+  filter: invert(100%);
+  position: absolute;
+  /* z-index: -1; */
+  opacity: .3;
+}
+
+.Domestic .backgroundImg {
+  width: 50%;
+  /* display: block; */
+  left: 50px;
+  bottom: 15%;
+  filter: invert(50%);
+  position: absolute;
+  /* z-index: -1; */
+  opacity: .3;
+}
+
+  .saleImg {
+    width: 45%;
+    position: absolute;
+    right: -20px;
+    top: -15px;
+   transform: rotate(90deg);
+   animation-duration: 2s;
+   animation-name: wiggle;
+   animation-iteration-count: infinite;
+       /* z-index: 3; */
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(95deg);
+    } 
+    50% {
+      transform: rotate(85deg);
+    }
+    100% {
+      transform: rotate(95deg);
+    }
+  }
+
+
+  .beerCardTitle {
+    /* display: block; */
+    position: relative;
+    /* z-index: 2; */
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 24px;
+    padding: 10px;
+    width: fit-content;
+    left: 10%;
+   }
+
+  .beerCardType {
+    display: block;
+    position: relative;
+    /* z-index: 2; */
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 5px;
+    width: fit-content;
+    left: 20%;
+  }
+
+  .beerCardAbv {
+    display: block;
+    position: relative;
+    /* z-index: 2; */
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 5px;
+    width: fit-content;
+  left: 20%;
+  }
+
+  .beerCardhopType{
+    display: block;
+    position: relative;
+    /* z-index: 2; */
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 5px;
+    width: fit-content;
+  left: 20%;
+  }
+
+  .beerCardshortDescription {
+    display: inline-block;
+    position: relative;
+    /* z-index: 2; */
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 5px;
+    width: fit-content;
+  left: 5%;
+  }
+
+  .beerCardlongDescription {
+  position: relative;
+  /* z-index: 2; */
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 5px;
+  opacity: 0;
+  bottom: 1px;
+  left: 5px;
+  width: fit-content;
+  display: none;
+  /* transition: 1s; */
+  }
+
+/* Beer Card Specific CSS */
+
+
+.IPA {
+  background-color: #077187;
+  color: #EE964B;
+  z-index: 0;
+}
+
+.IPA:hover {
+  transform: scale(1.6) ;
+ background-color: #077287 ;
+ color: #EE964B;
+ z-index: 1;
+transition: 500ms;
+}
+
+.IPA:hover h3 {
+  opacity: 0;
+  transition: 300ms;
+}
+
+.IPA:hover .beerCardlongDescription {
+  display: block;
+  transform: perspective();
+  position: relative;
+  opacity: 1.0;
+  transform: translateY(-70px);
+  transition: transform 2s ease;
+/* transition: 300ms; */
+}
+.Pale.Ale {
+  background-color: #231123;
+  color: #D6CDAD;
+  z-index: 0;
+}
+
+.Pale.Ale:hover {
+  transform: scale(1.6) ;
+  transition: 300ms;
+  background-color: #231123;
+  color: #D6CDAD;
+  z-index: 1;
+}
+
+.Pale.Ale:hover h3 {
+  opacity: 0;
+  transition: 300ms;
+}
+
+.Pale.Ale:hover .beerCardlongDescription {
+  display: block;
+  transform: perspective();
+  position: relative;
+  opacity: 1.0;
+  transform: translateY(-70px);
+  transition: transform 2s ease;
+/* transition: 300ms; */
+}
+
+.Porter {
+  background-color: #82204A;
+  color: #231123;
+  z-index: 0;
+}
+
+.Porter:hover {
+  transform: scale(1.6) ;
+  transition: 300ms;
+  background-color: #82204A;
+  color: #231123;
+  z-index: 1;
+
+}
+
+
+.Porter:hover h3 {
+  opacity: 0;
+  transition: 300ms;
+}
+
+.Porter:hover .beerCardlongDescription {
+  display: block;
+  transform: perspective();
+  position: relative;
+  opacity: 1.0;
+  transform: translateY(-70px);
+  transition: transform 2s ease;
+/* transition: 300ms; */
+}
+
+.Hefeweizen {
+  background-color: #EE964B;
+  color: #82204A;
+  z-index: 0;
+}
+
+.Hefeweizen:hover {
+  transform: scale(1.5);
+  transition: 300ms;
+  background-color: #EE964B;
+  color: #82204A;
+  z-index: 1;
+
+}
+
+
+.Hefeweizen:hover h3 {
+  opacity: 0;
+  transition: 300ms;
+}
+
+.Hefeweizen:hover .beerCardlongDescription {
+  display: block;
+  transform: perspective();
+  position: relative;
+  opacity: 1.0;
+  transform: translateY(-70px);
+  transition: transform 2s ease;
+/* transition: 300ms; */
+}
+
+.Domestic {
+  background-color: #CCFBFE;
+  color: #077187;
+  z-index: 0;
+}
+
+.Domestic:hover {
+  transform: scale(1.5);
+  transition: 300ms;
+  background-color: #CCFBFE;
+  color: #077187;
+    z-index: 1;
+}
+
+
+.Domestic:hover h3 {
+  opacity: 0;
+  transition: 300ms;
+}
+
+.Domestic:hover .beerCardlongDescription {
+  display: block;
+  transform: perspective();
+  position: relative;
+  opacity: 1.0;
+  transform: translateY(-70px);
+  transition: transform 2s ease;
+/* transition: 300ms; */
+}
+
+.Stout {
+  background-color: #0D3B66;
+  color: #CCFBFE;
+  z-index: 0;
+}
+
+.Stout:hover {
+  transform: scale(1.5);
+  transition: 300ms;
+  background-color: #0D3B66;
+  color: #CCFBFE;
+    z-index: 1;
+}
+
+
+.Stout:hover h3 {
+  opacity: 0;
+  transition: 300ms;
+}
+
+.Stout:hover .beerCardlongDescription {
+  display: block;
+  transform: perspective();
+  position: relative;
+  opacity: 1.0;
+  transform: translateY(-70px);
+  transition: transform 2s ease;
+/* transition: 300ms; */
 }
 
 #locationSection {
@@ -160,6 +543,60 @@ header h1 {
 
 #contactSection {
   /* placeholder */
+}
+
+#name {
+  margin-left: 30.5px;
+  border-radius: 7px;
+
+}
+
+#phone {
+  /* margin-left: 159px; */
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+#email {
+  margin-left: 4px;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+#message {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#contactButton {
+  border-radius: 10px;
+  margin-top: 100px;
+  margin-left: 45%;
+}
+
+#contactButton:hover{
+  background-color: rgb(104, 145, 182);
+  cursor: pointer;
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#messageLabel {
+  
+}
+#contactimg {
+  height: 200px;
+  width: 300px;
+  float: right;
+  border-radius: 30px;
 }
 
 #contactSection p {
@@ -248,16 +685,24 @@ button {
 
 #beerInventoryForm input, select {
   float: right;
+  border-radius: 7px;
 }
 
 #beerInventoryForm textarea {
   display: block;
   width: 90%;
   margin: 10px auto 0 auto;
+  border-radius: 10px;
 }
 
 #beerInventoryForm button {
   margin: 0 auto;
+  border-radius: 10px;
+}
+
+#beerInventoryForm button:hover {
+  background-color: rgb(104, 145, 182);
+  cursor: pointer;
 }
 
 #one, #two, #three, #four, #five, #six {
@@ -267,6 +712,7 @@ button {
 #beerTypeInput {
   width: 131px;
   height: 19px;
+  border-radius: 7px;
 }
 
 #inventoryTable {
@@ -311,10 +757,17 @@ table th {
 
 #announcement {
   width: 100%;
+  border-radius: 10px;
 }
 
 #announcementBannerForm button {
   margin: 15px auto 0 auto;
+  border-radius: 10px;
+}
+
+#announcementBannerForm button:hover {
+  background-color: rgb(104, 145, 182);
+  cursor: pointer;
 }
 
 #passwordResetForm {
@@ -327,8 +780,15 @@ table th {
   display: block;
   width: 50%;
   margin: 0 auto;
+  border-radius: 7px;
 }
 
 #passwordResetForm button {
   margin: 15px auto 0 auto;
+  border-radius: 10px;
+}
+
+#passwordResetForm button:hover {
+  background-color: rgb(104, 145, 182);
+  cursor: pointer;
 }

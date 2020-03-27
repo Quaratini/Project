@@ -11,7 +11,7 @@
 <body>
 
   <header>
-    <img id="logo" src="assets/BeerLogo-01.png" alt="logo">
+    <img id="logo" src='assets/iconfinder_beer_811447.png' alt="logo">
     <ul id="social">
       <li><a href=""><img src="assets/fb-icon.png" alt="facebook"></a></li>
       <li><a href=""><img src="assets/insta-icon.png" alt="instagram"></a></li>
@@ -31,16 +31,38 @@
   <main id='main'>
     <!-- About Us Section -->
     <section id="aboutSection">
-      <h1>Welcome to Quarantini Hop-Shop. We are a small local PNW brewery located in the heart of Seattle. We brew and carry beers of all backgrounds. We started off brewing in our parents garages. What was originally just a fun off to the side hobby, then turned into a local well known beer brand. We then figured since we've been doing this for so long and had so many request from friends and family, that we'd go into business.</h1>
-      <img src="pics/cask.jpeg" alt="beer barrel">
+      <h1 id=aboutUsTitle>Who We Are</h1>
+      <p id='aboutUsText'>Welcome to Quarantini Hop-Shop. We are a small local PNW brewery located in the heart of Seattle. We brew and carry beers of all backgrounds. We started off brewing in our parents garages. What was originally just a fun off to the side hobby, then turned into a local well known beer brand. We then figured since we've been doing this for so long and had so many request from friends and family, that we'd go into business.</p>
+      <img id='cask' src="pics/cask.jpeg" alt="beer barrel">
+      <h1 id='party'>Quarantini Party</h1>
+      <img id='haz1' src='pics/hazmat1.jpeg'>
+      <img id='haz2' src='pics/hazmat2.jpeg'>
+      <img id='haz3' src='pics/hazmat3.jpeg'>
+      <img id='haz4' src='pics/hazmat4.jpeg'>
     </section>
 
     <!-- Our Beers Section -->
     <section id="beerSection">
       <h1>Check Out Our Beers!</h1>
+      
       <div id="toggleSwitches">
         <h2>Filters</h2>
+          <form name='toggles'>
+            <label>IPA</label>
+            <input type="checkbox" class='beerFilter' id='IPA'>
+            <label>Pale Ale</label>
+            <input type="checkbox" class='beerFilter' id='Pale Ale'>
+            <label>Porter</label>
+            <input type="checkbox" class='beerFilter' id='Porter'>
+            <label>Stout</label>
+            <input type="checkbox" class='beerFilter' id='Stout'>
+            <label>Hefewiezen</label>
+            <input type="checkbox" class='beerFilter' id='Hefeweizen'>
+            <label>Domestic</label>
+            <input type="checkbox" class='beerFilter' id='Domestic'>
+          </form>
       </div>
+
       <div id="beerCardSection">
         <h2>Beer List</h2>
       </div>
@@ -54,16 +76,26 @@
 
     <!-- Contact Us Section -->
     <section id="contactSection">
-      <h1>Contact Info</h1>
-      <p>Phone: (555)-555-5555</p>
-      <p>Email: welovebeer@gmail.com</p>
+      <h1>Send us a message!</h1>
+      <form id='contact' action="https://formspree.io/xjvozpye" method="POST">
+        <img id='contactimg' src='pics/women.jpeg'>
+        <label>Please enter your full name</label>
+        <input type='text' id='name' name='name'><br>
+        <label>Please enter your phone number</label>
+        <input type='text' id='phone' name='phone'><br>
+        <label>Please enter your email address</label>
+        <input type='text' id='email' name='email'><br>
+        <label id='messageLabel'>Leave us a message</label>
+        <textarea name='message' id='message' cols='50' rows='3'></textarea>
+        <button type='submit' id='contactButton'>Submit</button>
+      </form>
     </section>
   </main>
   
   <footer>
     <ul>
       <li>Paul, Ken, Ryan, Peyton</li>
-      <li id="smallLogoContainer"><img id="smallLogo" src="assets/BeerLogo-01.png" alt="smaller logo"></li>
+      <li id="smallLogoContainer"><img id="smallLogo" src='assets/iconfinder_beer_811447.png'alt="smaller logo"></li>
       <li><p id="link">Control Panel</p></li>
     </ul>
     <p>&copy; Quarantini Group</p>
